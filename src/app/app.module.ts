@@ -8,7 +8,10 @@ import { HomeComponent } from './componentes/home/home.component';
 import { PreciosComponent } from './componentes/precios/precios.component';
 import { ProtegidaComponent } from './componentes/protegida/protegida.component';
 
-import { AuthModule } from '@auth0/auth0-angular'; 
+import { AuthModule } from '@auth0/auth0-angular';
+import { ContactoComponent } from './componentes/contacto/contacto.component';
+import { TemplateFormsComponent } from './componentes/template-forms/template-forms.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +20,9 @@ import { AuthModule } from '@auth0/auth0-angular';
     NavbarComponent,
     HomeComponent,
     PreciosComponent,
-    ProtegidaComponent
+    ProtegidaComponent,
+    ContactoComponent,
+    TemplateFormsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,9 @@ import { AuthModule } from '@auth0/auth0-angular';
       authorizationParams: {
         redirect_uri: window.location.origin
       }
-    })
+    }),
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

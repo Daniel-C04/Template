@@ -15,6 +15,9 @@
           <li class="nav-item">
             <a class="nav-link" routerLinkActive="active" routerLink="/protegida" *ngIf="auth.isAuthenticated$ | async">Protegida</a>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" routerLinkActive="active" routerLink="/contacto">Contacto</a>
+          </li>
         </ul>
 
         <div style="margin-right: 15px;" *ngIf="auth.isAuthenticated$ | async">
